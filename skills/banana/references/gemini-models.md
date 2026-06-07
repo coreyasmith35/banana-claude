@@ -34,17 +34,19 @@
 | **Best For** | Free-tier users, budget-conscious high-volume workflows, 1K-resolution use cases |
 | **Cost** | ~$0.039/image at 1K |
 
-## ⛔ DEPRECATED -- Nano Banana Pro (gemini-3-pro-image-preview)
+### gemini-3-pro-image -- Nano Banana Pro
 
-<!-- REMOVED 2026-03-19: gemini-3-pro-image-preview shut down by Google March 9, 2026 -->
+| Property | Value |
+|----------|-------|
+| **Model ID** | `gemini-3-pro-image` (GA). `gemini-3-pro-image-preview` also resolves on Vertex. |
+| **Tier** | Nano Banana Pro -- reasoning model |
+| **Status** | **Active on Vertex AI** (verified working via Vertex in this fork) |
+| **Speed** | Slower than Flash -- it "thinks" before generating (returns reasoning text) |
+| **Max Resolution** | Up to 4096×4096 (4K) |
+| **Best For** | Highest fidelity, dense/legible text, complex multi-element scenes, final hero assets |
+| **Note** | Upstream marked this "shut down March 2026" -- that applies to the AI Studio preview ID, **not** Vertex. On Vertex (`vertexai=True`) both `gemini-3-pro-image` and the `-preview` alias generate successfully. Use the GA id `gemini-3-pro-image`. |
 
-**Shut down by Google on March 9, 2026.** API calls to this model ID will fail
-with a hard error. Do not use. The replacement is Nano Banana 2
-(`gemini-3.1-flash-image-preview`).
-
-**Was:** Nano Banana Pro tier -- professional asset production, 4K output, 14 reference images, 94% text accuracy.
-
-**Migration:** Replace all references to `gemini-3-pro-image-preview` with `gemini-3.1-flash-image-preview`.
+Select it with `--model gemini-3-pro-image` on the Vertex scripts.
 
 ## Deprecated Models (DO NOT USE)
 
